@@ -341,6 +341,7 @@ public class QuizActivity extends AppCompatActivity {
                 Log.d(TAG, "onClick: ANS=" + q.getAnswer());
 
                 allAnswered();
+                showExplanation(q);
             }
         });
 
@@ -488,6 +489,10 @@ public class QuizActivity extends AppCompatActivity {
                 }
 
                 allAnswered();
+                if (current_ques_number != 7) {
+                    showExplanation(q);
+                }
+
             }
         });
 
@@ -594,6 +599,8 @@ public class QuizActivity extends AppCompatActivity {
                     }
 
                     allAnswered();
+
+                    showExplanation(questions.get(current_ques_number - 1));
                 }
             });
 
@@ -632,13 +639,13 @@ public class QuizActivity extends AppCompatActivity {
         Question q8 = new Question(8, "What are the infections associated with intravenous drug use ?", "", 0, "HIV~Viral hepatitis – Hepatitis C, Hepatitis D, Hepatitis B ~Skin infections~Infective Endocarditis (heart infection)~Pulmonary infections (chest infection)~All of the above", "1,2,3,4,5,6");
         Question q9 = new Question(9, "Is there increased risk of dying in IV drug abusers compared to someone who ages normally ?", "", 1, "YES~NO", "1");
         Question q10 = new Question(10, "What percent (%) total injection drug users in the world are affected with HIV ?", "", 2, "", "17");
-        Question q11 = new Question(11, "What percent (%) of total injection drug users are affected with HCV ?", "", 2, "", "53");
+        Question q11 = new Question(11, "What percent (%) of total injection drug users are affected with HCV(Hepatitis C Virus) ?", "", 2, "", "53");
         Question q12 = new Question(12, "If you think you've been exposed to HIV, when should you consult doctor to start Post-exposure prophylaxis ?", "", 1, "within 3 days~3-5 days~5-7 days~> 7 days", "1");
         Question q13 = new Question(13, "Have you heard of Syringe Service Programs (SSPs) or Needle exchange programs (NEPs) ?", "", 1, "YES~NO", "1");
         Question q14 = new Question(14, "How does injecting drugs increase the risk of HIV, Hepatitis C virus, Hepatitis B virus ? ", "", 1, "Lowers inhibitions & alters judgement resulting in poor decisions such as - sex without condom, multiple sexual partners, sharing syringe/needle/other equipment~Turning to other ways to get the drug, including trading sex for drugs or money, which increases HIV risk.~Drugs lower immunity which make it easy to contract the viruses~Both A and B", "4");
         Question q15 = new Question(15, "If you are an intravenous drug user, how often should you test yourself for HIV ?", "", 1, "At least once a year~Once in 2 years~Once in 5 years~Never", "1");
         Question q16 = new Question(16, "Have you heard of any Needle exchange programmes or visited any in your area ?", "", 1, "YES~NO", "1");
-        Question q17 = new Question(17, "What is the best way to lower your risk of getting infected with HIV, HCV, HBV if yo are an injectable drug user ?", "", 1, "Use sterile needles~Take pre-exposure  prophylaxis For HIV~Stop injectable drug use~Do not share needles or other equipments", "4");
+        Question q17 = new Question(17, "What is the best way to lower your risk of getting infected with HIV(Human Immunodeficiency Virus), HCV(Hepatitis C Virus), HBV(Hepatitis B Virus) if you are an injectable drug user ?", "", 1, "Use sterile needles~Take pre-exposure  prophylaxis For HIV~Stop injectable drug use~Do not share needles or other equipments", "4");
         Question q18 = new Question(18, "Do you think SSPs can help you  to stop using drugs?", "", 1, "YES~NO", "1");
 
         questions.add(q1);

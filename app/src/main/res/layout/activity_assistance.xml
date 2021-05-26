@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Your contact information will remain completely confidential and won't be saved anywhere. It will be sent to the appropriate medical professional via email."
-        android:textColor="@color/black"
+        android:textColor="@color/red"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
