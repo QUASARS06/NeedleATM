@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/res_scoretext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="You scored - 4/15"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/res_mssg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Congratulations! You have won the quiz. We would like to gift you a reward for learning with us"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/res_scoretext" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/res_scoreProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progress="80"
+        app:indicatorSize="140dp"
+        app:layout_constraintBottom_toTopOf="@id/res_align"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/res_mssg"
+        app:trackColor="@color/grey"
+        app:trackCornerRadius="8dp"
+        app:trackThickness="6dp" />
+
+    <TextView
+        android:id="@+id/res_scoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="80%"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/res_scoreProgress"
+        app:layout_constraintEnd_toEndOf="@id/res_scoreProgress"
+        app:layout_constraintStart_toStartOf="@id/res_scoreProgress"
+        app:layout_constraintTop_toTopOf="@id/res_scoreProgress" />
+
+    <View
+        android:id="@+id/res_align"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/res_scoreProgress" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/res_collectReward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Collect Reward"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/res_align"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/res_align" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/res_takeQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Take Quiz Again"
+        app:layout_constraintBottom_toTopOf="@id/res_align"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/res_scoreProgress" />
+
+    <TextView
+        android:id="@+id/res_orelse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or else"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/res_continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/res_continue"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/res_align"
+        app:strokeWidth="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
