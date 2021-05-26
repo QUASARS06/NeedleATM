@@ -1,10 +1,8 @@
 package com.health.needleatm;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,7 +60,7 @@ public class AssistanceActivity extends AppCompatActivity {
                             Intent i = new Intent(AssistanceActivity.this, ExitActivity.class);
                             startActivity(i);
                         }
-                    },1500);
+                    }, 1500);
                 } else {
                     verifyOtpMssg.setText("Invalid OTP !!");
                     verifyOtpMssg.setTextColor(getResources().getColor(R.color.red));
@@ -97,7 +95,11 @@ public class AssistanceActivity extends AppCompatActivity {
     protected void sendEmail() {
         String sender_email = getString(R.string.email_id);
         String sender_pass = getString(R.string.pass);
-        new EmailSenderAsync().execute("chiragajain291@gmail.com", "Thank you for contacting us this morning", sender_email, sender_pass);
+
+        String email_being_sent_to = "chiragajain291@gmail.com";
+        String email_body = "Thank you for contacting us this morning";
+
+        new EmailSenderAsync().execute(email_being_sent_to, email_body, sender_email, sender_pass);
     }
 }
 
