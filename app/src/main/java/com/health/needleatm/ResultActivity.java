@@ -13,7 +13,7 @@ import com.google.android.material.progressindicator.CircularProgressIndicator;
 
 public class ResultActivity extends AppCompatActivity {
 
-    int points = 9;
+    int points = 4;
 
     CircularProgressIndicator scoreProgress;
     TextView scoreValue;

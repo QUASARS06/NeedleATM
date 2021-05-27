@@ -42,6 +42,7 @@ public class RatingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(RatingActivity.this, AssistanceActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 

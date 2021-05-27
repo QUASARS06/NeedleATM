@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -30,10 +31,21 @@ public class RewardActivity extends AppCompatActivity {
         rew_syrn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RewardActivity.this, RatingActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(RewardActivity.this, RatingActivity.class);
+//                Intent intent = new Intent(RewardActivity.this, RatingActivity.class);
+//                startActivity(intent);
+
+                FragmentManager fm = getSupportFragmentManager();
+                NeedleCodeFragment  needleCodeFragment = new NeedleCodeFragment();
+                needleCodeFragment.show(fm, "needle_code");
             }
         });
 
     }
 }
+
+// 4160
+
+//    Your OTP to verify Phone number is 5247.
+//        It will be valid for 1 minute only.
+//        - Needle AidTM

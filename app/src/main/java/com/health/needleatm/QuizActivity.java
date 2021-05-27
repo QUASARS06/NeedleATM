@@ -98,6 +98,7 @@ public class QuizActivity extends AppCompatActivity {
                 Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
                 intent.putExtra("points", points);
                 startActivity(intent);
+                finish();
             }
         });
     }
