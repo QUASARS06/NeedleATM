@@ -121,7 +121,7 @@ public class QuizActivity extends AppCompatActivity {
         //        Question q14 = new Question(14, 1, "4");
         //        Question q15 = new Question(15, 1, "1");
         //        Question q16 = new Question(16, 1, "1");
-        //        Question q17 = new Question(17, 1, "4");
+        //        Question q17 = new Question(17, 1, "3");
         //        Question q18 = new Question(18, 1, "1");
 
         for (Question ques : questions) {
@@ -533,7 +533,9 @@ public class QuizActivity extends AppCompatActivity {
             if (q.getQuesNumber() == 10) {
                 if (val >= 14 && val <= 20) {
                     slider_text.setBackgroundResource(R.color.green);
-                    slider_text.setText(val + "%\nClose Enough");
+                    if(val != 17){
+                        slider_text.setText(val + "%\nClose Enough");
+                    }
                 } else {
                     slider_text.setBackgroundResource(R.color.red);
                     slider_text.setText(val + "%\nToo Far");
@@ -541,7 +543,9 @@ public class QuizActivity extends AppCompatActivity {
             } else if (q.getQuesNumber() == 11) {
                 if (val >= 50 && val <= 56) {
                     slider_text.setBackgroundResource(R.color.green);
-                    slider_text.setText(val + "%\nClose Enough");
+                    if(val != 53){
+                        slider_text.setText(val + "%\nClose Enough");
+                    }
                 } else {
                     slider_text.setBackgroundResource(R.color.red);
                     slider_text.setText(val + "%\nToo Far");
@@ -583,7 +587,9 @@ public class QuizActivity extends AppCompatActivity {
                     if (q.getQuesNumber() == 10) {
                         if (val >= 14 && val <= 20) {
                             slider_text.setBackgroundResource(R.color.green);
-                            slider_text.setText(val + "%\nClose Enough");
+                            if(val != 17){
+                                slider_text.setText(val + "%\nClose Enough");
+                            }
                         } else {
                             slider_text.setBackgroundResource(R.color.red);
                             slider_text.setText(val + "%\nToo Far");
@@ -591,7 +597,9 @@ public class QuizActivity extends AppCompatActivity {
                     } else if (q.getQuesNumber() == 11) {
                         if (val >= 50 && val <= 56) {
                             slider_text.setBackgroundResource(R.color.green);
-                            slider_text.setText(val + "%\nClose Enough");
+                            if(val != 53){
+                                slider_text.setText(val + "%\nClose Enough");
+                            }
                         } else {
                             slider_text.setBackgroundResource(R.color.red);
                             slider_text.setText(val + "%\nToo Far");
@@ -645,7 +653,7 @@ public class QuizActivity extends AppCompatActivity {
         Question q14 = new Question(14, "How does injecting drugs increase the risk of HIV, Hepatitis C virus, Hepatitis B virus ? ", "", 1, "Lowers inhibitions & alters judgement resulting in poor decisions such as - sex without condom, multiple sexual partners, sharing syringe/needle/other equipment~Turning to other ways to get the drug, including trading sex for drugs or money, which increases HIV risk.~Drugs lower immunity which make it easy to contract the viruses~Both A and B", "4");
         Question q15 = new Question(15, "If you are an intravenous drug user, how often should you test yourself for HIV ?", "", 1, "At least once a year~Once in 2 years~Once in 5 years~Never", "1");
         Question q16 = new Question(16, "Have you heard of any Needle exchange programmes or visited any in your area ?", "", 1, "YES~NO", "1");
-        Question q17 = new Question(17, "What is the best way to lower your risk of getting infected with HIV(Human Immunodeficiency Virus), HCV(Hepatitis C Virus), HBV(Hepatitis B Virus) if you are an injectable drug user ?", "", 1, "Use sterile needles~Take pre-exposure  prophylaxis For HIV~Stop injectable drug use~Do not share needles or other equipments", "4");
+        Question q17 = new Question(17, "What is the best way to lower your risk of getting infected with HIV(Human Immunodeficiency Virus), HCV(Hepatitis C Virus), HBV(Hepatitis B Virus) if you are an injectable drug user ?", "", 1, "Use sterile needles~Take pre-exposure  prophylaxis For HIV~Stop injectable drug use~Do not share needles or other equipments", "3");
         Question q18 = new Question(18, "Do you think SSPs can help you  to stop using drugs?", "", 1, "YES~NO", "1");
 
         questions.add(q1);

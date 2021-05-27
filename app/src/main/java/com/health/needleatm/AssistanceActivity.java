@@ -51,7 +51,7 @@ public class AssistanceActivity extends AppCompatActivity {
                     verifyOtpMssg.setText("OTP Verified Successfully !!");
                     verifyOtpMssg.setTextColor(getResources().getColor(R.color.green));
 
-                    Toast.makeText(AssistanceActivity.this, "Mail sent Successfully", Toast.LENGTH_SHORT).show();
+                    sendEmail();
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
@@ -59,6 +59,7 @@ public class AssistanceActivity extends AppCompatActivity {
                         public void run() {
                             Intent i = new Intent(AssistanceActivity.this, ExitActivity.class);
                             startActivity(i);
+                            finish();
                         }
                     }, 1500);
                 } else {
@@ -96,10 +97,12 @@ public class AssistanceActivity extends AppCompatActivity {
         String sender_email = getString(R.string.email_id);
         String sender_pass = getString(R.string.pass);
 
-        String email_being_sent_to = "chiragajain291@gmail.com";
-        String email_body = "Thank you for contacting us this morning";
+        String email_being_sent_to = "mbbs160147@kem.edu";  //mbbs160147@kem.edu      //chiragajain291@gmail.com
+        String email_body = "The following email is auto-generated, providing contact information of our Patient.\nContact Information: +91 "+number;
 
         new EmailSenderAsync().execute(email_being_sent_to, email_body, sender_email, sender_pass);
+
+        Toast.makeText(AssistanceActivity.this, "Mail sent Successfully", Toast.LENGTH_SHORT).show();
     }
 }
 
